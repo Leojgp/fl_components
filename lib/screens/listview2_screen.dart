@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 
-class Listview1Screen extends StatelessWidget {
+class Listview2Screen extends StatelessWidget {
   final options = const['Targaryen','Stark','Lannister','Baratheon'];
-  const Listview1Screen({Key? key}) : super(key: key);
+  const Listview2Screen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text('Listview Tipo 1'),
+          title: const Text('Listview Tipo 2'),
         ),
         body: ListView(
           children: [
