@@ -11,7 +11,9 @@ class Listview2Screen extends StatelessWidget {
           title: const Text('Listview Tipo 2'),
         ),
         body: ListView.separated(
-          itemBuilder: (context, index) => Text(options[index]), 
+          itemBuilder: (context, index) => ListTile(
+              trailing: Icon(Icons.arrow_forward_ios_outlined),
+              title: Text(options[index])), 
           // Cada vez que itere en options pondrá un divider
           separatorBuilder: (context, index) => const Divider(), 
           itemCount: options.length
