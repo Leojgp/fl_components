@@ -6,12 +6,9 @@ class CardScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-      backgroundColor: Colors.blueAccent,
-      title: const Text(
-        'Card Screen',
-        style: TextStyle(color: Colors.white),
+      body: Center(
+        child: Text('Card Screen'),
       ),
-    ));
+    );
   }
 }
