@@ -16,10 +16,6 @@ class MyApp extends StatelessWidget {
       initialRoute: AppRoutes.initialRoute,
       routes: AppRoutes.routes,
       // Controla la excepción de si se escribe una ruta mal nos lleve a ua ruta por defecto
-      onGenerateRoute: (settings) {
-        return MaterialPageRoute(builder: (context) => const AlertScreen()
-        );
-      },
-    );
+      onGenerateRoute: AppRoutes.onGenerateRoute);
   }
 }
