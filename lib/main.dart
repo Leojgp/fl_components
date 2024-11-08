@@ -9,10 +9,13 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return  MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Material App',
-      home: Listview2Screen()
+      home: const Listview2Screen(),
+      routes: {
+        'listview1': (BuildContext context) => Listview1Screen()
+      },
     );
   }
 }
