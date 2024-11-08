@@ -16,7 +16,7 @@ class HomeScreen extends StatelessWidget {
       ),
       body: ListView.separated(
         itemBuilder: (context, index) => ListTile(
-          leading: Icon(Icons.abc_outlined),
+          leading: const Icon(Icons.abc_outlined),
           title: const Text('Nombre de ruta'),
           onTap: () {
             //Navigator.push(context, route);
