@@ -17,7 +17,7 @@ class AppRoutes {
         name: 'Listview1 Screen',
         screen: const Listview1Screen()),
     MenuOption(
-        route: 'listview1',
+        route: 'listview2',
         icon: Icons.list_alt,
         name: 'Listview2 Screen',
         screen: const Listview2Screen()),
@@ -35,8 +35,8 @@ class AppRoutes {
 
   static Map<String, Widget Function(BuildContext)> getAppRoutes() {
     Map<String, Widget Function(BuildContext)> appRoutes = {};
-    for(final option in MenuOptions){
-      appRoutes.addAll({option.route : (BuildContext context) => option.screen});
+    for (final option in MenuOptions) {
+      appRoutes.addAll({option.route: (BuildContext context) => option.screen});
     }
 
     return appRoutes;

@@ -9,10 +9,9 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.blueAccent,
+        //backgroundColor: Colors.blueAccent,
         title: const Text(
           'Componentes de Flutter',
-          style: TextStyle(color: Colors.white),
         ),
       ),
       body: ListView.separated(

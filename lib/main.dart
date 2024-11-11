@@ -1,4 +1,5 @@
 import 'package:fl_components/routes/app_routes.dart';
+import 'package:fl_components/theme/app_theme.dart';
 import 'package:flutter/material.dart';
 import 'screens/screens.dart';
 
@@ -16,6 +17,8 @@ class MyApp extends StatelessWidget {
       initialRoute: AppRoutes.initialRoute,
       routes: AppRoutes.getAppRoutes(),
       // Controla la excepción de si se escribe una ruta mal nos lleve a ua ruta por defecto
-      onGenerateRoute: AppRoutes.onGenerateRoute);
+      onGenerateRoute: AppRoutes.onGenerateRoute,
+      theme: AppTheme.lightTheme
+    );
   }
 }
