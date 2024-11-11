@@ -8,14 +8,27 @@ class CustomCardTipo1 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Card(
+    return Card(
       child: Column(
         children: [
-          ListTile(
-            leading: Icon(Icons.photo_album_outlined, color: AppTheme.primary,),
-            title: Text('Título de la tarjeta'),
-            subtitle: Text('Eiusmod dolore cillum in consequat ex. Irure adipisicing Lorem veniam sint aliquip. Sint sunt commodo Lorem sunt nulla. Et eu dolor occaecat cillum ex sint incididunt aliquip enim consectetur velit.'
+          const ListTile(
+            leading: Icon(
+              Icons.photo_album_outlined,
+              color: AppTheme.primary,
             ),
+            title: Text('Título de la tarjeta'),
+            subtitle: Text(
+                'Eiusmod dolore cillum in consequat ex. Irure adipisicing Lorem veniam sint aliquip. Sint sunt commodo Lorem sunt nulla. Et eu dolor occaecat cillum ex sint incididunt aliquip enim consectetur velit.'),
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              TextButton(onPressed: () {}, child: Text('Cancelar')),
+              Padding(
+                padding: const EdgeInsets.only(right: 8.0),
+                child: TextButton(onPressed: () {}, child: Text('Aceptar')),
+              ),
+            ],
           )
         ],
       ),
