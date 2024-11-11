@@ -16,6 +16,10 @@ static final ThemeData lightTheme = ThemeData.light().copyWith(
         ),
         listTileTheme: const ListTileThemeData(
           iconColor: primary
+        ),
+        //Text Button Theme
+        textButtonTheme: TextButtonThemeData(
+          style: TextButton.styleFrom(foregroundColor: primary)
         )
       );
 }
