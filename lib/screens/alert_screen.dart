@@ -6,9 +6,10 @@ class AlertScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-         body: Center(
+      body: Center(
         child: Text('Alert Screen'),
       ),
+      floatingActionButton: FloatingActionButton(child: Icon(Icons.close),onPressed: () => Navigator.pop(context)),
     );
   }
 }
