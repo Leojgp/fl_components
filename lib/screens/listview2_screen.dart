@@ -48,7 +48,7 @@ class CasasScreen extends StatelessWidget {
       ),
       body: ListView(children:  [
         CustomCardTipo2(
-            imageURL: url),
+            imageURL: url,nombre: casa,),
       ]),
     );
   }
