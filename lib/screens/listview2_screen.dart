@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:fl_components/widgets/widgets.dart';
 
 class Listview2Screen extends StatelessWidget {
   final options = const ['Targaryen', 'Stark', 'Lannister', 'Baratheon'];
+  final images = const ['https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRskqSQvxuVqecVFOQF0pARK9K5J0VX5ryqBQ&s','https://i0.wp.com/xn--lacompaialibredebraavos-yhc.com/wp-content/uploads/2017/05/House-Stark-HBO.jpeg?fit=1024%2C663&ssl=1','https://i0.wp.com/xn--lacompaialibredebraavos-yhc.com/wp-content/uploads/2017/06/Game-of-Thrones-House-Lannister-Sigils-Wallpaper.jpg?fit=1024%2C663&ssl=1','https://images5.fanpop.com/image/photos/29900000/House-a-song-of-ice-and-fire-29965901-1920-1080.jpg'];
   const Listview2Screen({Key? key}) : super(key: key);
 
   @override
@@ -17,10 +19,11 @@ class Listview2Screen extends StatelessWidget {
                 title: Text(options[index]),
                 onTap: () {
                   final casa = options[index];
+                  final url = images[index];
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => CasasScreen(casa: casa),
+                      builder: (context) => CasasScreen(casa: casa,url: url,),
                     ),
                   );
                 }),
@@ -32,8 +35,10 @@ class Listview2Screen extends StatelessWidget {
 
 class CasasScreen extends StatelessWidget {
   final String casa;
+  final String url;
 
-  const CasasScreen({Key? key, required this.casa}) : super(key: key);
+  const CasasScreen({Key? key, required this.casa, required this.url})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -41,12 +46,10 @@ class CasasScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text('Casa $casa'),
       ),
-      body: Center(
-        child: Text(
-          'Bienvenido a la casa $casa',
-          style: const TextStyle(fontSize: 24),
-        ),
-      ),
+      body: ListView(children:  [
+        CustomCardTipo2(
+            imageURL: url),
+      ]),
     );
   }
 }
