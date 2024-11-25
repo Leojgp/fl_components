@@ -31,6 +31,11 @@ class AppRoutes {
         icon: Icons.add_alert_outlined,
         name: 'Alert Screen',
         screen: const AlertScreen()),
+        MenuOption(
+        route: 'avatar',
+        icon: Icons.person,
+        name: 'Avatar Screen',
+        screen: const AvatarScreen()),
   ];
 
   static Map<String, Widget Function(BuildContext)> getAppRoutes() {
