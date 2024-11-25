@@ -24,6 +24,15 @@ class AppTheme {
         elevation: 5,
         shape: StadiumBorder(),
         foregroundColor: secondary,
+      ),
+      elevatedButtonTheme:  ElevatedButtonThemeData(
+        style: ElevatedButton.styleFrom(
+          backgroundColor: primary,
+          foregroundColor: Colors.white,
+          // Establezco el redondeado
+          shape: StadiumBorder(),
+
+        )
       )
       );
 }
