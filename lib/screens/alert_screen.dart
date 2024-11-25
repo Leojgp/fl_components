@@ -12,15 +12,21 @@ class AlertScreen extends StatelessWidget {
       builder: (context){
         return AlertDialog(
           title: Text('Alerta'),
+          shape: RoundedRectangleBorder(borderRadius: BorderRadiusDirectional.circular(10)),
           content: 
           Column(
             mainAxisSize: MainAxisSize.min,
             children: [
               Text('Este es el contenido del mensaje alerta'),
               SizedBox(height: 10,),
-              FlutterLogo( size: 100,)
+              FlutterLogo( size: 100,),
             ],
           ),
+          actions: [
+            TextButton(
+              onPressed: () => Navigator.pop(context), 
+              child: Text('Cerrar'))
+          ],
         );
       }
       );
@@ -33,7 +39,8 @@ class AlertScreen extends StatelessWidget {
         child: ElevatedButton(onPressed: () => displayDialog(context), 
         child: Padding(
           padding: const EdgeInsets.all(20.0),
-          child: const Text('Mostrar alerta', style: TextStyle(fontSize: 20)),
+          child: const Text('Mostrar alerta', style: TextStyle(fontSize: 20)
+          ),
         )
         ),
       ),
